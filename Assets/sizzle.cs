@@ -18,13 +18,24 @@ public class sizzle : MonoBehaviour {
 		saw.Play ();
 		Debug.Log ("Nurrrr");
 		saw.loop = true;
+		//StartCoroutine ("waiting function");
+		//InvokeRepeating ("WaitingFunction", 0f, 4f);
+
 	}
 
+
+	//private IEnumerator WaitingFunction(){
+	//	yield return new WaitForSeconds(4);
+	//	saw.Play ();
+	//}
 	void OnCollisionEnter(Collision col) {
 
 		if (col.gameObject) {
 			startGrill ();
+
 		}
+
+
 
 	}
 }
