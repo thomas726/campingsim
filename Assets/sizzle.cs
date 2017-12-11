@@ -28,14 +28,13 @@ public class sizzle : MonoBehaviour {
 	//	yield return new WaitForSeconds(4);
 	//	saw.Play ();
 	//}
-	void OnCollisionEnter(Collision col) {
-
-		if (col.gameObject) {
-			startGrill ();
-
-		}
 
 
-
+	void OnTriggerEnter (Collider other)
+	{
+		if (other.CompareTag("grillheat"))
+			{
+				startGrill();
+			}
 	}
 }
